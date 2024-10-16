@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="proj2.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" autocomplete="on">
+            <div class="fields"><input type="text" id="height-input" placeholder="Enter Your Height in cm" required>
+            </div>
+            <div class="fields"><input type="text" id="weight-input" placeholder="Enter Your weight in kg" required>
+            </div>
+
+            <div class="fields"><button>Calculate</button></div>
+
+            <div id="result"></div>
+            <div id="alert"></div>
+
+        </form>
+
+    </div>
+</body>
+<script>
+    let form = document.querySelector('form');
+    form.addEventListener('submit', function (sendData) {
+        sendData.preventDefault();
+
+        const height = parseInt(document.querySelector('#height-input').value);
+        const weight = parseInt(document.querySelector('#weight-input').value);
+        console.log(height);
+        const result = document.querySelector('#result');
+        const alert = document.querySelector('#alert');
+        if (height <= 0 || height === '' || isNaN(height)) {
+            result.innerHTML = `Not a valid height, please enter valid one`;
+        } else if (weight <= 0 || weight === '' || isNaN(weight)) {
+            result.innerHTML = `Not a valid weight, please enter valid one`;
+        }
+        else {
+            const BMI = (weight / ((height * height) / 10000)).toFixed(2);
+            result.innerHTML = `<div>Your Body Mass Index is: ${BMI}</div>`;
+
+            if (BMI < 18) {
+                alert.innerHTML = `<div>You're underweight</div>`;
+            } else if (BMI >= 18 && BMI <= 24.9) {
+                alert.innerHTML = `<div>You've a normal body mass index</div>`;
+            } else if (BMI > 24.9) {
+                alert.innerHTML = `<div>You're overweight</div>`;
+            } else {
+                alert.innerHTML = `<div>Invalid Choice</div>`;
+            }
+
+        }
+
+
+    });
+</script>
+
+</html>

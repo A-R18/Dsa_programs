@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="proj1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="button" id="blue"></div>
+        <div class="button" id="black"></div>
+        <div class="button" id="green"></div>
+        <div class="button" id="red"></div>
+    </div>
+</body>
+<script>
+    let buttons = document.querySelectorAll('.button');
+    let body = document.querySelector('body');
+   
+    buttons.forEach(function(button){
+        button.addEventListener('click', function(touch){
+            
+            switch(touch.target.id){
+
+                case 'green':
+                    body.style.backgroundColor = touch.target.id;
+                    break
+                case 'red':
+                    body.style.backgroundColor = touch.target.id;
+                    break
+                case 'blue':
+                    body.style.backgroundColor = touch.target.id;
+                    break
+
+                case 'black':
+                    body.style.backgroundColor = touch.target.id;
+                    break
+                    default:
+                        console.error('Problem in this program');
+            }
+          
+
+
+        })
+
+    });
+        
+    
+</script>
+</html>

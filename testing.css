@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mnbx{
+    /* border:2px solid red; */
+    display: flex;
+    flex-direction: column;
+    height: auto
+}
+.sctnz{
+    height:100vh;
+    border:1px solid rgb(26, 29, 236);
+
+}
+
+@media only screen and (max-width: 480px){
+    .sctnz{
+        background-color: rgb(247, 255, 133);
+    
+    }
+     
+}

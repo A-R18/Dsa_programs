@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul style="text-decoration: none;" class="list">
+        <li>Main Players:</li>
+    </ul>
+</body>
+<script>
+    let mainElement = document.createElement('div');
+    console.log(mainElement)
+    mainElement.className = 'mn';
+    mainElement.style.margin = 'auto';
+    mainElement.style.backgroundColor = 'red';
+    mainElement.style.height = '200px';
+    mainElement.style.width = '600px';
+    let id = mainElement.id = Math.round(Math.random() * 10 + 1);
+    console.log(id);
+
+    // mainElement.innerText = 'This is what you want to have it in your dictionary';
+    let subElement = document.createElement('div');
+    let secondElement = mainElement.appendChild(subElement);
+    secondElement.className = 'ch';
+    secondElement.style.height = '100px';
+    secondElement.style.width = '300px';
+    secondElement.style.backgroundColor = 'purple';
+    document.body.appendChild(mainElement);
+    document.body.style.backgroundColor = '#212121';
+    document.body.style.color = '#fff';
+    secondElement.style.margin = 'auto';
+    // secondElement.innerText = 'This is what you are able to see';
+
+
+    document.title = 'MY DOC';
+
+    function addPlayer(athlete) {
+        let item = document.createElement('li');
+        item.appendChild(document.createTextNode(athlete));
+        document.querySelector('.list').appendChild(item);
+    }
+    addPlayer('Babar Azam');
+    addPlayer('Abdullah Shafique');
+    addPlayer('Saud Shakeel');
+    addPlayer('Kamran Ghulam');
+    addPlayer('Saim Ayub');
+
+    function editsecondPlayer(athlete) {
+        let secondItem = document.querySelector('li:nth-child(3)');
+        let newElement = document.createElement('li');
+        newElement.innerText = athlete;
+        secondItem.replaceWith(newElement);
+
+
+    }
+
+    function deleteSecondPlayer(){
+
+        let secondItem = document.querySelector('li:nth-child(1)');
+        secondItem.remove();
+    }
+
+    deleteSecondPlayer();
+
+
+    // editsecondPlayer('Haider Ali');
+
+
+</script>
+
+</html>

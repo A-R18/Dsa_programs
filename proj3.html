@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-3</title>
+    <link rel="stylesheet" href="proj3.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><img id="my-img"
+                    src="https://plus.unsplash.com/premium_photo-1661963212517-830bbb7d76fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2VifGVufDB8fDB8fHww"
+                    alt="IMG"></li>
+            <li><img id="my-img"
+                    src="https://plus.unsplash.com/premium_photo-1678565546661-bf43274dd428?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2VifGVufDB8fDB8fHww"
+                    alt="drawing"></li>
+            <li><img id="my-img"
+                    src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHdlYnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="picture"></li>
+            <li><img id="my-img"
+                    src="https://plus.unsplash.com/premium_photo-1683288537184-7ef228ca6820?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHdlYnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="tasveer"></li>
+            <li><img id="my-img"
+                    src="https://images.unsplash.com/photo-1501597334-47e7213a28b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fHdlYnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="clicked-photo"></li>
+            <li><img id="my-img"
+                    src="https://plus.unsplash.com/premium_photo-1685086785077-ff65bf749544?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2VifGVufDB8fDB8fHww"
+                    alt="photograph"></li>
+            <li><img id="my-img"
+                    src="https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdlYnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="photo"></li>
+                <li><img id="my-img"
+                        src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYnxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="picture"></li>
+            <li> <a href="https://google.com">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="main">
+
+        <div class="text" id="txt">YOUR LOCAL TIME</div>
+        <div class="clock" id="clck"></div>
+    </div>
+</body>
+<script>
+    document.body.style.backgroundColor = '#212121';
+    let digClock = document.getElementById('clck');
+
+    setInterval(function () {
+
+        let date = new Date();
+        // console.log(date);
+        digClock.innerHTML = date.toLocaleTimeString();
+    }, 500);
+
+    const navImage = document.querySelector('.nav');
+    navImage.addEventListener('click', function (clickEvent) {
+        
+        const targetItem = clickEvent.target.parentNode;
+        if(targetItem.firstElementChild.tagName === 'IMG'){
+        targetItem.remove();
+        }
+      
+    });
+
+
+</script>
+
+</html>
