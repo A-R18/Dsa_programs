@@ -99,9 +99,8 @@ const topJokes = [
 const jokeDiv = document.getElementById('jk');
 
 
-
 setInterval(function(){
-  let randomNumber = Math.floor(Math.random()*topJokes.length);
+  let randomNumber = Math.floor(Math.random()*topJokes.length)+1;
 console.log(randomNumber);
 jokeDiv.innerHTML = topJokes[randomNumber];
 
@@ -109,8 +108,24 @@ jokeDiv.innerHTML = topJokes[randomNumber];
 
 
 
+document.body.style.backgroundColor = '#212121';
 
+let element = document.getElementById('jkk');
+// element.setAttribute('hidden' );
+// element.hidden = true;
+element.style.backgroundColor = 'green';
+// element.style.display = 'none';
+// element.innerHTML +=  "<div id='nbr' class= 'nvbr'><ul><li>Home</li><li>About US</li><li>Contact US</li><li>Our Services</li></ul></div>";
 
+// let newElement = document.createElement('div');
+// let appendedCh = element.appendChild(newElement);
+
+// newElement.setAttribute('class', 'newElem');
+// newElement.setAttribute('id', 'newEl');
+// // newElement.setAttribute('hidden', '');
+// newElement.style.backgroundColor = 'pink';
+// newElement.innerText = 'I want to write a lot of text in my existing div';
+// console.log(appendedCh);
 
 
   
