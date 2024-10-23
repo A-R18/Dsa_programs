@@ -29,6 +29,35 @@
     
 
 }
+
+body{
+    font-family: 'ubuntu';
+    color: white;
+    background:#212121;
+}
+
+body>table{
+    border: 3px solid white;
+    margin: 10% auto;
+    /* table-layout: fixed; */
+    border-radius: 20px;
+    border-collapse: collapse;
+
+}
+table > tr,th,td {
+  
+    padding: 12px;
+    background-color: rgba(186, 233, 233, 0.103);
+}
+tr:nth-child(odd){
+   
+    border-top: 2px solid white;
+    background-color: rgba(27, 27, 27, 0.349);
+}
+
+tr:active{ background-color: rgba(29, 133, 133, 0.418);
+
+}
 ul>li{
     list-style: none;
     cursor: pointer;
