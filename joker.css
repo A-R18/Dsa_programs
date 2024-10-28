@@ -48,3 +48,19 @@ body {
     font-size: 60px;
     color: rgb(73, 4, 73);
 }
+
+button {
+    padding: 10px;
+    width: 90px;
+    background-color: rgb(71, 4, 25);
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+button:hover {
+
+    background-color: rgb(49, 27, 34);
+   box-shadow: 400px;
+}
